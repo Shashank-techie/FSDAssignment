@@ -1,0 +1,15 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 97vw;
+    height: 85vh;
+    margin: 20px;
+}
+
+body{
+    
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR72vZ3pXtDYceKjB67IG61MVwTC_pFcnY3ow&s");
+    background-size: cover;
+}  
+

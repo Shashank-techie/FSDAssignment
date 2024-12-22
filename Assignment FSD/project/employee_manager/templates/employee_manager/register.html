@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="{% static "css/register.css" %}">
+</head>
+<body>
+    <main class="wrapper">
+        <section class="user-details">
+            <section id="logo-details">
+                <a href={% url "home" %} class="anchor">
+                    <img src={% static "img/logo.png" %} alt="Main logo" id="main-logo" class="main-logo">
+                </a>
+            </section>
+
+            <form method="POST" class="user-input">
+                {% csrf_token %}
+                <h2>User Registration</h2>
+
+                {% for field in form %}
+                    <div class="input-box">
+                        <label for="{{ field.id_for_label }}" class="input-label">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <ul class="error-list">
+                                {% for error in field.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+                <button type="submit" class="submit-btn">Register</button>  <!-- Added submit button -->
+            
+                <section class="login">
+                    <a href="{% url 'login' %}" class="anchor">Already have an account? Login</a>
+                </section>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

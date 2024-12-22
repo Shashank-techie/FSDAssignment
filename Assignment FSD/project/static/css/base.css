@@ -1,0 +1,232 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navigation-bar {
+    background: linear-gradient(90deg, #4a90e2, #50c878);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.icon-container {
+    margin-right: auto;
+}
+
+.image-container {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.link-container, .user-container {
+    display: flex;
+    align-items: center;
+}
+
+.list-items {
+    list-style: none;
+    margin: 0 0.5rem;
+}
+
+.anchor {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.anchor:hover {
+    background-color: white;
+    color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: white;
+    color: #ff4d4d;
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .link-container, .user-container {
+        flex-direction: column;
+        margin: 0.5rem 0;
+    }
+
+    .list-items {
+        margin: 0.5rem 0;
+    }
+
+    .anchor {
+        width: 100%;
+        text-align: center;
+    }
+} 
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5; /* Softer background color */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+.navigation-bar {
+    background: linear-gradient(90deg, #4a90e2, #50c878);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.icon-container {
+    margin-right: auto;
+}
+
+.image-container {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.1); /* Subtle hover effect for logo */
+}
+
+/* Link and user container */
+.link-container,
+.user-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Ensures consistent spacing */
+}
+
+.list-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Anchor styles */
+.anchor {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.anchor:hover {
+    background-color: white;
+    color: #4a90e2;
+    border-color: #4a90e2;
+    transform: translateY(-2px); /* Adds hover elevation */
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: white;
+    color: #ff4d4d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .link-container,
+    .user-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .list-items {
+        margin: 0.5rem 0;
+    }
+
+    .anchor {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Utility hover effects */
+.link-container .anchor.active,
+.user-container .anchor.active {
+    background-color: white;
+    color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+/* Subtle button shadows */
+.anchor,
+.logout-btn {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.anchor:hover,
+.logout-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

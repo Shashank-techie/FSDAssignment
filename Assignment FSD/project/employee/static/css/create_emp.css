@@ -1,0 +1,141 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c2c5c9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 100vh;
+    color: #333;
+    
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+body {
+    padding-top: 2px; 
+}
+
+
+.container {
+    width: 100%;
+    /* max-width: 600px; */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Remove margin-top to center vertically */
+}
+
+.form-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.input-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+
+.error-list {
+    margin-top: 5px;
+    padding-left: 20px;
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+.error-list li {
+    list-style-type: circle;
+}
+
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.alert.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .form-elements {
+        gap: 15px;
+    }
+}

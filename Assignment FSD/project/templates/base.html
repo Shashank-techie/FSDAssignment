@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Page - title{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+</head>
+<body>
+    <header class="navigation-bar">
+        <nav class="navBar">
+            <div class="icon-container">
+                <a href={% url "home" %} class="anchor"><img src={% static "img/logo.png" %} alt="icon" class="image-container"></a>
+            </div>
+
+            <div class="link-container">
+                <li class="list-items"><a href={% url "home" %} class="anchor">Home</a></li>
+                {% if request.session.userInfo %}
+                    <li class="list-items"><a href={% url "show_employee" %} class="anchor">Employee List</a></li>
+                {% endif %}
+            </div>
+
+            <div class="user-container">
+                {% if request.session.userInfo %}
+                <div class="logged-in">
+                    <li class="list-items">
+                        <a href="#" class="anchor">Welcome, {{ request.session.userInfo.f_name }}</a>
+                    </li>
+                    <li class="list-items">
+                        <a href="{% url 'logout' %}" class="anchor">Logout</a>
+                    </li>
+                </div>
+                {% else %}
+                <div class="logged-out">
+                    <li class="list-items">
+                        <a href="{% url 'login' %}" class="anchor">Login</a>
+                    </li>
+                    <li class="list-items">
+                        <a href="{% url 'register' %}" class="anchor">Register</a>
+                    </li>
+                </div>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+</html> 
